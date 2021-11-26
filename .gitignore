@@ -2,5 +2,6 @@
 dist/
 node_modules/
 .env
+api.export.js
 .DS_Store
 *.log

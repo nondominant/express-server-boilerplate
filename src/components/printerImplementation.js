@@ -7,4 +7,4 @@ class printit {
   }
 }
 
-export default printit;
+module.exports = { printit };

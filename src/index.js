@@ -1,20 +1,18 @@
-import dotenv from "dotenv";
-import express from "express";
-import path from "path";
+const express = require("express");
+const path = require("path");
 
 
 const cors = require('cors');
-const router = require('./routes');
-dotenv.config();
-const port = process.env.SERVER_PORT;
+const router = require('./routes.js');
 const app = express();
 const server = require('http').createServer(app);
 
 app.use(cors());
 
+app.use(express.json());
+
 app.use('/', router);
 
-app.use(express.json());
 
 //Configure routes.register(app);
 //start the express server
